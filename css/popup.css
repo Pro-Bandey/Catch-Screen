@@ -1,0 +1,158 @@
+body {
+    width: 210px;
+    border-radius: 15px;
+    height: auto;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    position: relative;
+}
+
+
+
+/* ------------- */
+.CatchBtnsWrapper {
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.CatchBtnsWrapper button {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Google Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 10px auto;
+    color: #000000;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    transition: background-color .25s;
+    box-shadow: 3px 3px 0 0 rgb(255 0 0 / 46%), -4px -4px 0 0 rgb(255 0 0 / 40%);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.CatchBtnsWrapper button:hover {
+    background: #ff000078;
+    scale: 1.1;
+    box-shadow: 3px 3px 0 0 rgb(255 0 0 / 26%), -4px -4px 0 0 rgb(255 0 0 / 20%);
+}
+
+.CatchBtnsWrapper button svg {
+    fill: #000000;
+}
+
+
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+
+/*----------------------->*/
+
+
+.CatchContainerMassage {
+    font-family: 'Google Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    position: absolute;
+    top: -25px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
+    color: #ff0000;
+    line-height: 100%;
+    pointer-events: none;
+}
+
+.CatchContainerMassage .svg {
+    padding: 20px 5px 0;
+    fill: yellow;
+    stroke: #000000;
+}
+
+.CatchContainerMassage hr {
+    margin: 10px 0 0;
+    border: none;
+    background: #fff;
+    height: 3.5px;
+    box-shadow: 0 0 1px 1px #3a393938 inset;
+}
+
+.CatchContainerMassage .p {
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+.CatchContainerMassage .p2 {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* -------------------------- */
+
+.CatchLoaderWaitng {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #0000001a;
+}
+
+.CatchLoaderWaitng:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #000000 transparent #000000 transparent;
+    animation: CatchLoaderWaitng 1.2s linear infinite;
+}
+
+@keyframes CatchLoaderWaitng {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.CatchFinishSection {
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* ------------ */
+.hidden {
+    display: none;
+}
+
+.unactive {
+    display: none !important;
+}

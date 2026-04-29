@@ -1,0 +1,132 @@
+body {
+    background-color: #ff0000;
+}
+
+.rb-image-editor-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Open Sans, sans-serif;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+}
+
+.tui-image-editor-container .tui-image-editor-checkbox {
+    display: inline-block;
+    margin: 1px 0 15px;
+}
+
+.tui-image-editor-container .tui-image-editor-submenu-align:first-child label>span {
+    width: 100px;
+
+}
+
+.tui-image-editor-container.left .tui-image-editor-submenu .tui-image-editor-submenu-item label>span:not(:empty) {
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+    flex-wrap: nowrap;
+}
+
+.tui-image-editor-container.left .tui-image-editor-submenu {
+    background-color: #ff0000;
+}
+
+.tui-image-editor-container.left .tie-icon-add-button .tui-image-editor-button {
+    margin: 0 15px 30px;
+}
+
+.tui-image-editor-container.left .tui-image-editor-range-wrap.tui-image-editor-newline.short {
+    margin-left: 30px;
+}
+
+.tui-image-editor-container.left .tui-image-editor-container .tui-image-editor-controls-logo,
+.tui-image-editor-container.left .tui-image-editor-header-logo {
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.tui-image-editor-container.left .tui-image-editor-container .tui-image-editor-controls-logo>img,
+.tui-image-editor-container.left .tui-image-editor-container .tui-image-editor-header-logo>img,
+.tui-image-editor-container.left .tui-image-editor-controls-logo>img,
+.tui-image-editor-container.left .tui-image-editor-header-logo>img {
+    width: 64px;
+    height: 64px;
+}
+
+.tui-image-editor-download-btn,
+.tui-image-editor-load-btn {
+    margin-right: 10px;
+}
+
+.loader {
+    width: 200px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.loader img {
+    width: 80px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.loader p {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rb-editor-alert {
+    display: none;
+    top: -100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 10px;
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: 900;
+    font-family: serif;
+    text-align: center;
+    border-radius: 10px;
+    /*display: block;*/
+    background: #ffffff;
+    box-shadow: 0 3px 6px 3px rgba(0, 0, 0, 0.8);
+}
+
+.svg2 {
+    margin-bottom: -25px;
+    padding-right: 5px;
+    fill: rgba(0, 0, 0, 0);
+    stroke: #ff0000;
+}
+
+.pw {
+    width: auto;
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: serif;
+    margin-bottom: 0%;
+    /*display: block;*/
+    background: #ffffff;
+}
+
+.rb-editor-alert.rb-editor-alert {
+    animation: rbPushNotification 0.6s ease-in;
+    top: 50px;
+}

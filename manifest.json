@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Catch Screen",
+  "short_name": "CaSee",
+  "description": "Impressive screenshot tool lets users can take full page screen capture selected page screen capture and edit screenshot.",
+  "version": "2025.1",
+  "offline_enabled": true,
+
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "64": "icons/64.png",
+      "128": "icons/128.png"
+    },
+    "default_popup": "popup.html"
+  },
+
+  "permissions": ["storage", "unlimitedStorage", "scripting"],
+
+  "host_permissions": ["<all_urls>"],
+
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "css": ["/css/share-modal.css"],
+      "js": [
+        "/js/lib/fabric.js",
+        "/js/lib/jquery-3.2.1.min.js",
+        "/js/contentScript.js",
+        "/js/share-modal.js"
+      ],
+      "matches": ["<all_urls>"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "background": {
+    "service_worker": "/js/background.js"
+  },
+
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["/css/injectable.css", "editor.html"]
+    }
+  ]
+}
